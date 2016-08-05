@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>康超帅的主页</title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="webapp/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<link href="webapp/css/ohmygod.css" rel="stylesheet" type="text/css"/>
+		<link  rel="stylesheet" href="webapp/css/main.css" />
+		<link rel="stylesheet" type="webapp/text/css" href="css/sinaFaceAndEffec.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="webapp/js/main.js"></script>
+		<script type="text/javascript" src="webapp/js/sinaFaceAndEffec.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/1.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/2.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/3.jpg" alt="...">
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/4.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/5.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/6.jpg" alt="...">
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/7.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/8.jpg" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<a href="https://KeNanMi.github.io" class="thumbnail">
+						<img src="webapp/img/menu/9.jpg" alt="...">
+					</a>
+				</div>
+			</div>
+			<div id="content" style="margin-top: 50px; width: 700px; height: auto;">
+				<div class="wrap">
+					<div class="comment">
+						<div class="head-face">
+							<img src="webapp/img/test.jpg" / >
+							<p>我是鸟</p>
+						</div>
+						<div class="content">
+							<div class="cont-box">
+								<textarea class="text" placeholder="请输入..."></textarea>
+							</div>
+							<div class="tools-box">
+								<div class="operator-box-btn"><span class="face-icon">☺</span><span class="img-icon">▧</span></div>
+								<div class="submit-btn"><input type="button" onClick="out()"value="提交评论" /></div>
+							</div>
+						</div>
+					</div>
+					<div id="info-show">
+						<ul></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<script>
+	$('.face-icon').SinaEmotion($('.text'));
+	function out() {
+		var inputText = $('.text').val();
+		$('#info-show ul').append(reply(AnalyticEmotion(inputText)));
+	}
+	
+	var html;
+	function reply(content){
+		var date = new Date();
+		html = '<li>';
+		html += '<div class="head-face">';
+		html += '<img src="webapp/img/test.jpg" / >';
+		html += '</div>';
+		html += '<div class="reply-cont">';
+		html += '<p class="username">糊涂一点</p>';
+		html += '<p class="comment-body">'+content+'</p>';
+		html += '<p class="comment-footer">'+date+'回复　点赞58　转发12</p>';
+		html += '</div>';
+		html += '</li>';
+		return html;
+	}
+</script>
